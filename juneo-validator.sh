@@ -3,10 +3,7 @@ exists()
 {
   command -v "$1" >/dev/null 2>&1
 }
-if exists curl; then
-echo ''
-else
-  sudo apt-get update && sudo apt-get upgrade && sudo apt install curl -y < "/dev/null"
+sudo apt-get update && sudo apt-get upgrade && sudo apt install curl -y < "/dev/null"
 fi
 bash_profile=$HOME/.bash_profile
 if [ -f "$bash_profile" ]; then
@@ -16,7 +13,7 @@ sleep 1 && curl -s https://github.com/crptcpchk/utility-folder/blob/main/hlogo.s
 
 echo -e '\n\e[42mInstallin Docker & Docker Compose\e[0m\n' && sleep 1
 sudo apt install git docker.io docker-compose -y
-
+fi
 echo -e '\n\e[42mCloning GitHub repository\e[0m\n' && sleep 1
 cd && git clone https://github.com/Juneo-io/juneogo-binaries && sleep 1
 fi
