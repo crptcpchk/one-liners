@@ -1,10 +1,7 @@
 #!/bin/bash
-exists()
-{
-  command -v "$1" >/dev/null 2>&1
-}
+
 sudo apt-get update && sudo apt-get upgrade && sudo apt install curl -y < "/dev/null"
-fi
+
 bash_profile=$HOME/.bash_profile
 if [ -f "$bash_profile" ]; then
     . $HOME/.bash_profile
