@@ -1,6 +1,5 @@
 #!/bin/bash
-
-sleep 1 
+ 
 echo -e '\e[40m\e[97m'
 echo -e '                                                            '
 echo -e '                                           /ψψ              '
