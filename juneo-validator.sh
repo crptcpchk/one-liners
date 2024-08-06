@@ -21,12 +21,12 @@ echo -e '     | ψψψψψψψψ|  ψψψψψ /| ψψψψψψψψ| ψψ  | ψψ|
 echo -e '      \_______/| ψψ____/  \_______/|__/  |__/|__/  \__/     '
 echo -e '               | ψψ                                         '
 echo -e '               |__/                                         '
-echo -e '\e[0m'
-echo -e '\e[40m\e[93m         psi.crypto: https://discord.gg/Et92Ncafsk          \e[0m'
-echo -e '\e[40m\e[92m          HackenDAO: https://x.com/HackenDAO                \e[0m'
-echo -e '\e[40m\e[97m             RawBox: https://x.com/rawbox_tech              \e[0m'
-echo -e '\e[40m\e[96m             zkSync: https://t.co/thgiIXqtlA                \e[0m'
 echo -e '                                                            '
+echo -e '\e[40m\e[93m         psi.crypto: https://discord.gg/Et92Ncafsk'
+echo -e '\e[40m\e[92m          HackenDAO: https://x.com/HackenDAO     '
+echo -e '\e[40m\e[97m             RawBox: https://x.com/rawbox_tech   '
+echo -e '\e[40m\e[96m             zkSync: https://t.co/thgiIXqtlA     '
+echo -e '\e[0m'
 
 sleep 4
 
