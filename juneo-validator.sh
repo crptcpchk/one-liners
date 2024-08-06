@@ -1,11 +1,5 @@
 #!/bin/bash
 
-sudo apt-get update && sudo apt-get upgrade && sudo apt install curl -y < "/dev/null"
-
-bash_profile=$HOME/.bash_profile
-if [ -f "$bash_profile" ]; then
-    . $HOME/.bash_profile
-fi
 sleep 1 
 echo -e '\e[40m\e[97m'
 echo -e '                                                            '
@@ -35,6 +29,14 @@ echo -e '\e[40m\e[96m             zkSync: https://t.co/thgiIXqtlA               
 echo -e '                                                            '
 
 sleep 4
+
+echo -e '\n\e[42mUpdating the local package repository databasee\e[0m\n' && sleep 1
+sudo apt-get update && sudo apt-get upgrade && sudo apt install curl -y < "/dev/null"
+
+bash_profile=$HOME/.bash_profile
+if [ -f "$bash_profile" ]; then
+    . $HOME/.bash_profile
+fi
 
 echo -e '\n\e[42mInstallin Docker & Docker Compose\e[0m\n' && sleep 1
 sudo apt install git docker.io docker-compose -y
