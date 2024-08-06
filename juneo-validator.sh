@@ -29,7 +29,7 @@ echo -e '\e[0m'
 
 sleep 10
 
-echo -e '\n\e[104mUpdating the local package repository databasee\e[0m\n' && sleep 1
+echo -e '\n\e[44mUpdating the local package repository databasee\e[0m\n' && sleep 1
 sudo apt-get update && sudo apt-get upgrade && sudo apt install curl -y < "/dev/null"
 
 bash_profile=$HOME/.bash_profile
@@ -37,23 +37,23 @@ if [ -f "$bash_profile" ]; then
     . $HOME/.bash_profile
 fi
 
-echo -e '\n\e[104mInstallin Docker & Docker Compose\e[0m\n' && sleep 1
+echo -e '\n\e[44mInstallin Docker & Docker Compose\e[0m\n' && sleep 1
 sudo apt install git docker.io docker-compose -y
 
-echo -e '\n\e[104mCloning GitHub repository\e[0m\n' && sleep 1
+echo -e '\n\e[44mCloning GitHub repository\e[0m\n' && sleep 1
 cd && git clone https://github.com/Juneo-io/juneogo-binaries && sleep 1
 
-echo -e '\n\e[104mGranting execution permissions of the binary files\e[0m\n' && sleep 1
+echo -e '\n\e[44mGranting execution permissions of the binary files\e[0m\n' && sleep 1
 chmod +x ~/juneogo-binaries/juneogo
 chmod +x ~/juneogo-binaries/plugins/jevm
 chmod +x ~/juneogo-binaries/plugins/srEr2XGGtowDVNQ6YgXcdUb16FGknssLTGUFYg7iMqESJ4h8e
 
-echo -e '\n\e[104mMoving jevm and srEr2XGGtowDVNQ6YgXcdUb16FGknssLTGUFYg7iMqESJ4h8e to .juneogo/plugins folder\e[0m\n' && sleep 1
+echo -e '\n\e[44mMoving jevm and srEr2XGGtowDVNQ6YgXcdUb16FGknssLTGUFYg7iMqESJ4h8e to .juneogo/plugins folder\e[0m\n' && sleep 1
 mkdir -p ~/.juneogo/plugins && \
 mv ~/juneogo-binaries/plugins/jevm ~/.juneogo/plugins && \
 mv ~/juneogo-binaries/plugins/srEr2XGGtowDVNQ6YgXcdUb16FGknssLTGUFYg7iMqESJ4h8e ~/.juneogo/plugins
 
-echo -e '\n\e[104mCreating a service file\e[0m\n' && sleep 1
+echo -e '\n\e[44mCreating a service file\e[0m\n' && sleep 1
 
 echo "[Unit]
 Description=JUNEO Node
@@ -70,12 +70,12 @@ LimitNOFILE=65535
 WantedBy=multi-user.target" > $HOME/juneod.service
 sudo mv $HOME/juneod.service /etc/systemd/system
 
-echo -e '\n\e[104mRunning a service\e[0m\n' && sleep 1
+echo -e '\n\e[44mRunning a service\e[0m\n' && sleep 1
 sudo systemctl daemon-reload
 sudo systemctl enable juneod
 sudo systemctl start juneod
 
-echo -e '\n\e[104mCheck node status\e[0m\n' && sleep 1
+echo -e '\n\e[44mCheck node status\e[0m\n' && sleep 1
 if [[ `service juneod status | grep active` =~ "running" ]]; then
   echo -e "Your Juneo node \e[32minstalled and works\e[39m!"
   echo -e "You can check node status by the command \e[7mservice juneod status\e[0m"
