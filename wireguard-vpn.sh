@@ -44,7 +44,7 @@ echo -e '\n\e[44mCreating a folder\e[0m\n' && sleep 1
 mkdir wireguard && cd wireguard && sleep 1
 
 echo -e '\n\e[44mDownloading WireGuard manager & granting execution permissions\e[0m\n' && sleep 1
-curl https://raw.githubusercontent.com/complexorganizations/wireguard-manager/main/wireguard-manager.sh
+curl https://raw.githubusercontent.com/complexorganizations/wireguard-manager/refs/heads/main/wireguard-manager.sh
 chmod +x wireguard-manager.sh
 
 echo -e '\n\e[44mExecuting installation\e[0m\n' && sleep 1
