@@ -24,6 +24,9 @@ fi
 
 sleep 1 && curl -s https://raw.githubusercontent.com/crptcpchk/utility-folder/refs/heads/main/clogo.sh | bash && sleep 1
 
+echo -e '\n\e[42mUpdating rustup\e[0m\n' && sleep 1
+rustup update
+
 cd $HOME/nym
 
 echo -e '\n\e[42mPullin latest branch\e[0m\n' && sleep 1
