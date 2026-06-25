@@ -29,7 +29,7 @@ cd $HOME/nym
 
 echo -e '\n\e[42mPullin latest binary\e[0m\n' && sleep 1
 git pull
-git checkout master
+git switch -
 cd target/release
 
 echo -e '\n\e[42mRestarting daemon\e[0m\n' && sleep 1
