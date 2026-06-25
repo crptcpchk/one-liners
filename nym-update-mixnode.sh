@@ -31,7 +31,7 @@ cd $HOME/nym
 
 echo -e '\n\e[42mPullin latest branch\e[0m\n' && sleep 1
 git pull
-git switch -
+git checkout master
 
 echo -e '\n\e[42mBuilding latest binary\e[0m\n' && sleep 1
 cargo build --release
