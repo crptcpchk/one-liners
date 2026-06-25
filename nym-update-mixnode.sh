@@ -21,7 +21,7 @@ if [ -f "$bash_profile" ]; then
 fi
 sleep 1 && curl -s https://github.com/crptcpchk/utility-folder/blob/main/clogo.sh | bash && sleep 1
 
-cd nym
+cd $HOME/nym
 echo -e '\n\e[42mPullin latest binary\e[0m\n' && sleep 1
 git pull
 git checkout master
